@@ -29,4 +29,12 @@ func main() {
 	}
 
 	log.Println(user.FirstName, user.LastName, "Birthdate:", user.BirthDate)
+
+	changeUsingPointer(&user.LastName)
+
+}
+
+func changeUsingPointer(s *string) {
+	newValue := "red"
+	*s = newValue
 }
