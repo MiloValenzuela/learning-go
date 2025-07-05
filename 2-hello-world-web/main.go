@@ -2,17 +2,21 @@ package main
 
 import "log"
 
-func main() {
-	var myString string
-	myString = "Green"
-
-	log.Println("myString is set to", myString)
-	changeUsingPointer(&myString)
-	log.Println("after func call myString is set to", myString)
-
+type User struct {
+	FirstName string
+	LastName  string
 }
 
-func changeUsingPointer(s *string) {
-	newValue := "Red"
-	*s = newValue
+func main() {
+	myMap := make(map[string]User)
+
+	me := User{
+		FirstName: "Trevo",
+		LastName:  "Sawler",
+	}
+
+	myMap["me"] = me
+
+	log.Println(myMap["me"].FirstName)
+
 }
