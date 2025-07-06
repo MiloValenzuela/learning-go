@@ -2,21 +2,8 @@ package main
 
 import "log"
 
-type User struct {
-	FirstName string
-	LastName  string
-}
-
 func main() {
-	myMap := make(map[string]User)
+	names := []string{"one", "seven", "fish", "cat"}
 
-	me := User{
-		FirstName: "Trevo",
-		LastName:  "Sawler",
-	}
-
-	myMap["me"] = me
-
-	log.Println(myMap["me"].FirstName)
-
+	log.Println(names)
 }
