@@ -3,19 +3,10 @@ package main
 import "log"
 
 func main() {
+	var fistLine = "Once uppne a time"
 
-	myVar := "fish"
-
-	switch myVar {
-	case "cat":
-		log.Println("Cat is set to cat")
-	case "dog":
-		log.Println("cat is set to dog")
-	case "fish":
-		log.Println("cat is set to fish")
-
-	default:
-		log.Println("cat is something else")
+	for i, l := range fistLine {
+		log.Println(i, ":", l)
 	}
 
 }
