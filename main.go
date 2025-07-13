@@ -3,6 +3,8 @@ package main
 import (
 	"log"
 	"time"
+
+	"github.com/MiloValenzuela/learning-go/helpers"
 )
 
 var s = "seven"
@@ -31,6 +33,11 @@ func main() {
 	log.Println(user.FirstName, user.LastName, "Birthdate:", user.BirthDate)
 
 	changeUsingPointer(&user.LastName)
+
+	var myVar helpers.SomeType
+
+	myVar.TypeName = "Some Name"
+	log.Println(myVar.TypeName)
 
 }
 
