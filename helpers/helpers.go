@@ -1,6 +1,11 @@
 package helpers
 
-type SomeType struct {
-	TypeName   string
-	TypeNumber int
+import (
+	"math/rand"
+)
+
+func RandomNumber(n int) int {
+	// rand.Seed(time.Now().UnixNano())
+	value := rand.Intn(n)
+	return value
 }
